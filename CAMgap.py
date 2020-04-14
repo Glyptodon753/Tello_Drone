@@ -6,7 +6,7 @@ import cv2
 
 def cam(model, x, threshold=0.3, classes=('Fire', 'Neutral', 'Smoke')):
     x = np.expand_dims(x, axis=0)
-
+    print('aaa')
     last_conv_layer = model.get_layer('conv2d_3')
     predict = model.predict(x)
     class_idx = np.argmax(predict[0])
